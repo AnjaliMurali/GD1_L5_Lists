@@ -1,0 +1,31 @@
+import sys
+print("Hello! ")
+names = ["Aaron","Clara","Elon","Peter","Muhammed"]
+while True:
+    choice = int(input("Enter your choice: \n 1. See all names in the list \n 2.Add a name to the list \n 3.Remove a name from the list \n 4. Change the name in the list \n 5.Exit"))
+    if choice == 1:
+        print(names)
+    elif choice ==2:
+        x = input("Enter the name to include in the list : ")
+        names.append(x)
+        print("{} successfully added to the list".format(x))
+    elif choice == 3:
+        y = input("Enter the name that you want to delete: ")
+        names.remove(y)
+        print("{} successfully deleted from the list".format(y))
+    elif choice == 4:
+        print(names)
+        z = input("Enter the name from the list that you like to edit: ")
+        z1 = input("Enter the correct name : ")  
+        count = 0 #To get the index of the names list. 
+        for i in names:
+            if i==z:
+                names[count] = z1
+                print("{} successfully changed to {}".format(z,z1))
+            else:
+                count += 1
+                        
+    elif choice == 5:
+        sys.exit()
+    else:
+        print("Enter the correct choice number")
